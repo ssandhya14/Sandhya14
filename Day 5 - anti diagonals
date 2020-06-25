@@ -1,0 +1,50 @@
+int ** diagonal(int** A, int n11, int n12, int *len1, int *len2) {
+int i=1,j=1,k,l=0,c=1,i1=0,i2=0,n=n12;
+*len1=0;
+ printf("[%d ] ",A[0][0]);
+ if(n==1)
+ return NULL;
+ while(1)
+ { 
+ if(l==0)
+ {k=i;
+ printf("[");
+ while(k>=0)
+ {printf("%d ",A[l][k]);
+  k--;
+  l++;
+  c++;
+ }
+ l=0;
+ printf("] ");
+}
+else
+{if(i1==n)
+break;
+printf("[");
+ k=i;
+ while(k>=i1)
+ {printf("%d ",A[l][k]);
+  k--;
+  l++;
+ }
+  l=c;
+ printf("] ");
+}
+if(i1==n)
+break;
+ if(i<n-1)
+ {i++;
+  j++;
+  l=0;
+ }
+ else 
+ {
+ l++;
+ c=l;
+ i1++;
+ i2++;
+ }
+ }
+ return NULL;    
+}
