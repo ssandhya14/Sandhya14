@@ -1,0 +1,18 @@
+int coverPoints(int* A, int n1, int* B, int n2) {
+    int i=1,dis=0;
+    while(i<n1)
+    {
+        int xd=abs (A[i]-A[i-1]);
+        int yd=abs (B[i]-B[i-1]);
+        if(xd>yd)
+        {
+            dis+=xd;
+        }
+        else
+        {
+            dis+=yd;
+        }
+        i++;
+    }
+    return dis;
+}
